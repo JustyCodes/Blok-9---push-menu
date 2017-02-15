@@ -8,5 +8,5 @@ var main = setInterval(function() {
       
     currentSlide.fadeOut(600).removeClass('active-slide');
     nextSlide.fadeIn(600).addClass('active-slide');
-  }, 5000);
+  }, 3000);
 $(document).ready(main);
