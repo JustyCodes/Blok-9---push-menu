@@ -1,7 +1,8 @@
+var isMenuVisible = false;
+
 var main = function () {
-  var isMenuVisible = false;
   $('.icon-menu').click(function () {
-    if (isMenuVisible == false) {
+    if (!isMenuVisible) {
       $('.menu').animate({
         left: '0px'
       }, 200);
