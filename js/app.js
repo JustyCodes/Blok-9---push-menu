@@ -1,11 +1,7 @@
 var main = function () {
+  var isMenuVisible = false;
   $('.icon-menu').click(function () {
-    var clicked = $(this).data('clicked');
-    $(this).data('clicked', !clicked);
-    
-    
-    if (!clicked) {
-      
+    if (isMenuVisible == false) {
       $('.menu').animate({
         left: '0px'
       }, 200);
@@ -13,6 +9,7 @@ var main = function () {
       $('body').animate({
         left: '285px'
       }, 200);
+      isMenuVisible = true;
     } else {
       $('.menu').animate({
         left: '-285px'
@@ -20,7 +17,7 @@ var main = function () {
       $('body').animate({
         left: '0px'
       }, 200);
-      
+      isMenuVisible = false;
   
     }
     
