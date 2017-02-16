@@ -1,4 +1,3 @@
-/* Body with menu hidden */
 body {
   left: 0;
   margin: 0;
@@ -7,33 +6,31 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-/* Menu when hidden */
-.menu {
-  background: #590007;
-  left: -285px;  /* start off behind the scenes */
-  height: 100%;
-  position: fixed;
-  width: 285px;
-}
-
-/* Styling of the rest of the things */
-
 .jumbotron {
   height: 100%;
-  -webkit-background-size: cover;
-     -moz-background-size: cover;
-       -o-background-size: cover;
-          background-size: cover;
+  width: 100%;
+  position: absolute;
 }
 .jumbotron img {
   position: absolute;
+}
+/*menu*/
+
+.menu {
+  background: #590007;
+  height: 100%;
+  width: 285px;
+  float: left;
+  display: none;
+  position: relative;
+  z-index: 1;
 }
 
 .menu ul {
   border-top: 1px solid #636366;
   list-style: none;
-  margin: 0;
-  padding: 0;
+  margin-top: 100px;
+  padding: 5px;
 }
 
 .menu li {
@@ -52,16 +49,6 @@ body {
   text-transform: uppercase;
 }
 
-.icon-close {
-  cursor: pointer;
-  padding-bottom: 25px;
-  padding-left: 25px;
-  padding-top: 25px;
-}
-.icon-close img {
-  width: 50px;
-  height: 50px;
-}
 
 .icon-menu {
   cursor: pointer;
@@ -70,6 +57,7 @@ body {
   padding-top: 25px;
   width: 120px;
   float: left;
+  display: inline-block;
 }
 
 .icon-menu img {
