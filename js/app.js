@@ -1,5 +1,11 @@
 var main = function () {
-    $('.icon-menu').click(function () {
+  $('.icon-menu').click(function () {
+    var clicked = $(this).data('clicked');
+    $(this).data('clicked', !clicked);
+    
+    
+    if (!clicked) {
+      
       $('.menu').animate({
         left: '0px'
       }, 200);
@@ -7,26 +13,19 @@ var main = function () {
       $('body').animate({
         left: '285px'
       }, 200);
-      $('.icon-menu').toggle();
-      $('.icon-menu-black').toggle();
-      
-    });
-  };
-
-var close = function () {
-    $('.icon-menu-black').click(function () {
+    } else {
       $('.menu').animate({
         left: '-285px'
       }, 200);
       $('body').animate({
         left: '0px'
       }, 200);
-      $('.icon-menu').toggle();
-      $('.icon-menu-black').toggle();
+      
+  
+    }
     
-    });
-  };
-
+  });
+};
+    
   
 $(document).ready(main);
-$(document).ready(close);
